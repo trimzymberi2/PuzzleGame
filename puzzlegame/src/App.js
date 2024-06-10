@@ -1,6 +1,8 @@
 import './App.css';
+import React from 'react';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
+import Puzzle from './Components/Puzzle';
 
 function App() {
   return (
@@ -9,7 +11,6 @@ function App() {
         <Navbar className='w-full' />
         <Home className="w-full flex items-center justify-center m-24 bg-black"/>
       </div>
-      
     </div>
   );
 }

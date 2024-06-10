@@ -28,6 +28,8 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src="%PUBLIC_URL%/lib/pixi.min.js" onload="loadPixi()"></script>
+    <script src="%PUBLIC_URL%/lib/tween.min.js" onload="loadTween()"></script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -39,5 +41,27 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      let pixiLoaded = false;
+      let tweenLoaded = false;
+
+      function loadPixi() {
+        pixiLoaded = true;
+        initializeApp(); // Call any initialization routines here
+      }
+
+      function loadTween() {
+        tweenLoaded = true;
+        initializeApp(); // Call any initialization routines here
+      }
+
+      function initializeApp() {
+        // Check if both PIXI.js and Tween.js are loaded before initializing your app
+        if (pixiLoaded && tweenLoaded) {
+          // Initialize your React app or any other logic that depends on PIXI.js and Tween.js
+          ReactDOM.render(<App />, document.getElementById('root'));
+        }
+      }
+    </script>
   </body>
 </html>

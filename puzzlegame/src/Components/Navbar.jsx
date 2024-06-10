@@ -22,6 +22,15 @@ export default function Navbar() {
         </div>
         <img src={icon} onClick={toggleNavbar} alt="" className='hover:cursor-pointer h-10 md:hidden absolute top-5 right-0'/>
        
+        {isOpen && (
+         <div className='flex-col p-3 bg-backgroundSecondary flex gap-3 shadow md:hidden mt-4 justify-start sm:items-center  text-black'>
+              <h4 className='text-xl sm:text-2xl  hover:cursor-pointer'>HOME</h4>
+              <h4 className='text-xl sm:text-2xl  hover:cursor-pointer'>GAME</h4>
+              <h4 className='text-xl sm:text-2xl  hover:cursor-pointer'>ABOUT US</h4>
+              
+          </div>
+     
+        )}
     </div>
   )
 }

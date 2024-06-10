@@ -6,8 +6,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@tweenjs/tween.js": "^23.1.2",
     "autoprefixer": "^10.4.19",
     "lottie-react": "^2.4.0",
+    "pixi.js": "^8.1.6",
     "postcss": "^8.4.38",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,10 +23,32 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
     "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-undef": "off"
+    },
+    "globals": {
+      "PIXI": "readonly",
+      "TWEEN": "readonly"
+    }
   },
   "browserslist": {
     "production": [
